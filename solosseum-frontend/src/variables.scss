@@ -1,0 +1,37 @@
+@use "sass:color";
+
+/* Portfolio Design System from Figma Make– Colors (WCAG AA Compliant) */
+$primary-dark: #1a3a4a;
+$primary-medium: #3d6580;
+$primary-light: #5a96b3;
+
+$bg-light: #f4f8f7;
+$bg-secondary: #d8e3e0;
+$bg-dark: #1a3a4a;
+$bg-dark-lighter: #2a5468;
+
+$text-dark: #0d1f28;
+$text-light: #f0f4f3;
+$text-muted: #4a6b7d;
+$text-on-dark: #f0f4f3;
+
+$link-blue: #0052a3;
+$linkedin: #006699;
+$cream: #fafcfb;
+
+$overlay: rgba(13, 31, 40, 0.6);
+
+/* Portfolio Design System – Typography */
+$font-primary: "Inter", sans-serif;
+$font-secondary: "Roboto", sans-serif;
+
+/* 2. Font family */
+$font-base: "Inter", system-ui, sans-serif;
+
+/* 3. Typografiska storlekar (clamp) */
+$fs-body: clamp(1rem, 0.9rem + 0.3vw, 1.125rem);
+$fs-small: clamp(0.875rem, 0.85rem + 0.2vw, 1rem);
+
+$fs-h1: clamp(2.25rem, 1.8rem + 1.5vw, 3rem);
+$fs-h2: clamp(1.875rem, 1.5rem + 1.2vw, 2.5rem);
+$fs-h3: clamp(1.5rem, 1.25rem + 0.8vw, 2rem);
