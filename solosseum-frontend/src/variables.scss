@@ -1,25 +1,28 @@
 @use "sass:color";
 
 /* Portfolio Design System from Figma Make– Colors (WCAG AA Compliant) */
-$primary-dark: #1a3a4a;
-$primary-medium: #3d6580;
-$primary-light: #5a96b3;
+// Brand
+$color-brand-primary: #1a3a4a;
+$color-brand-primary-muted: #3d6580;
+$color-brand-primary-soft: #5a96b3;
 
-$bg-light: #f4f8f7;
-$bg-secondary: #d8e3e0;
-$bg-dark: #1a3a4a;
-$bg-dark-lighter: #2a5468;
+// Backgrounds
+$color-bg-base: #f4f8f7;
+$color-bg-subtle: #d8e3e0;
+$color-bg-inverse: #1a3a4a;
+$color-bg-inverse-soft: #2a5468;
 
-$text-dark: #0d1f28;
-$text-light: #f0f4f3;
-$text-muted: #4a6b7d;
-$text-on-dark: #f0f4f3;
+// Text
+$color-text-primary: #0d1f28;
+$color-text-muted: #4a6b7d;
+$color-text-inverse: #f0f4f3;
 
-$link-blue: #0052a3;
-$linkedin: #006699;
-$cream: #fafcfb;
+// Links
+$color-link-default: #0052a3;
+$color-link-linkedin: #006699;
 
-$overlay: rgba(13, 31, 40, 0.6);
+// Surfaces / misc
+$color-surface-cream: #fafcfb;
 
 /* Portfolio Design System – Typography */
 $font-primary: "Inter", sans-serif;

@@ -1,5 +1,5 @@
 .scroll-section {
-  height: 100vh;
-  background-color: salmon;
+  height: 100%;
   padding: 1rem;
+  scroll-snap-align: start;
 }

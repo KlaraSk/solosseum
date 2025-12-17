@@ -3,14 +3,14 @@ import "./index.scss";
 
 type Props = {};
 
-export const ContactSection = ({}: Props) => {
+export const PartnersSection = ({}: Props) => {
   return (
     <>
-      <ScrollSection extraClasses="bg-">ContactSection</ScrollSection>
+      <ScrollSection>PartnersSection</ScrollSection>
     </>
   );
 };
 
 /**
- * Contact section
+ * Partners section
  */
