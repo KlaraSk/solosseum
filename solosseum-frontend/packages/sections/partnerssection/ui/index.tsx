@@ -6,11 +6,7 @@ type Props = {};
 export const PartnersSection = ({}: Props) => {
   return (
     <>
-      <ScrollSection>PartnersSection</ScrollSection>
+      <ScrollSection id="partners-section">PartnersSection</ScrollSection>
     </>
   );
 };
-
-/**
- * Partners section
- */

@@ -4,9 +4,5 @@ import "./index.scss";
 type Props = {};
 
 export const ServicesSection = ({}: Props) => {
-  return <ScrollSection>ServicesSection</ScrollSection>;
+  return <ScrollSection id="services-section">ServicesSection</ScrollSection>;
 };
-
-/**
- * Services section
- */

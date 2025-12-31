@@ -6,11 +6,9 @@ type Props = {};
 export const ContactSection = ({}: Props) => {
   return (
     <>
-      <ScrollSection extraClasses="bg-">ContactSection</ScrollSection>
+      <ScrollSection id="contact-section" extraClasses="bg-">
+        ContactSection
+      </ScrollSection>
     </>
   );
 };
-
-/**
- * Contact section
- */

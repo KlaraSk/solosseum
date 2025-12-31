@@ -4,7 +4,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  outline: 1px solid salmon;
+  list-style: none;
+  // outline: 1px solid salmon;
 }
 
 /* 5. Typografi-klasser */
@@ -41,5 +42,39 @@
   background-color: $color-bg-base;
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
-  scroll-padding-top: 100px;
+  scroll-padding-top: 10rem;
+}
+
+/* ===== Flex & grid ===== */
+
+.flex {
+  display: flex;
+
+  &__column {
+    flex-direction: column;
+  }
+  &__align-center {
+    align-items: center;
+  }
+  &__align-start {
+    align-items: start;
+  }
+  &__justify-center {
+    justify-content: center;
+  }
+  &__gap-0-25 {
+    gap: 0.25rem;
+  }
+  &__gap-0-5 {
+    gap: 0.5rem;
+  }
+  &__gap-1 {
+    gap: 1rem;
+  }
+  &__gap-1-5 {
+    gap: 1.5rem;
+  }
+  &__gap-2 {
+    gap: 2rem;
+  }
 }
