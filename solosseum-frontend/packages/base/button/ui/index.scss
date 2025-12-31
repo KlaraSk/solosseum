@@ -1,0 +1,52 @@
+@mixin btn-colors($bg: null, $hoverbg: null, $activebg: null, $text: null, $hovertext: null, $activetext: null) {
+  @if $bg {
+    background: $bg;
+  }
+  @if $text {
+    color: $text;
+  }
+
+  &:hover {
+    transition: all 0.3s ease;
+    @if $hoverbg {
+      background: $hoverbg;
+    }
+    @if $hovertext {
+      color: $hovertext;
+    }
+  }
+  &:active {
+    @if $activebg {
+      background: $activebg;
+    }
+    @if $activetext {
+      color: $activetext;
+    }
+  }
+}
+
+.btn {
+  padding: 0.5rem 0.75rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.btn-transparent {
+  @include btn-colors(transparent, $color-bg-subtle, $color-brand-primary-muted, $color-brand-primary, null, $color-text-inverse);
+}
+
+.btn-light {
+  @include btn-colors($color-bg-subtle, $color-bg-subtle-soft, null, $color-brand-primary-muted, null, null);
+}
+
+.btn-active {
+  @include btn-colors(
+    $color-brand-primary-muted,
+    $color-bg-subtle,
+    $color-brand-primary-muted,
+    $color-text-inverse,
+    $color-brand-primary,
+    $color-text-primary
+  );
+}
