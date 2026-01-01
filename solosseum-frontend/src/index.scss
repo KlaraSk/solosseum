@@ -35,6 +35,21 @@
   line-height: 1.3;
 }
 
+.text-color-primary {
+  color: $color-brand-primary;
+}
+
+.text-color-dark {
+  color: $color-text-primary;
+}
+
+.text-color-muted {
+  color: $color-text-muted;
+}
+.text-color-inverse {
+  color: $color-text-inverse;
+}
+
 // scroll snap inspo: https://youtu.be/AKfkfoY6r24?si=lI5crTvCBCNTWRpP
 .app {
   height: 100vh;
@@ -76,5 +91,13 @@
   }
   &__gap-2 {
     gap: 2rem;
+  }
+}
+
+.grid {
+  display: grid;
+
+  &__center {
+    place-items: center;
   }
 }
