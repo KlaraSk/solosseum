@@ -5,16 +5,21 @@
   padding: 0;
   box-sizing: border-box;
   list-style: none;
+  font-family: $font-primary;
   // outline: 1px solid salmon;
 }
 
 /* 5. Typografi-klasser */
 .text-body {
   font-size: $fs-body;
+  line-height: 1.5rem;
 }
 
 .text-small {
   font-size: $fs-small;
+}
+.text-center {
+  text-align: center;
 }
 
 .heading-1 {
@@ -92,6 +97,12 @@
   &__gap-2 {
     gap: 2rem;
   }
+  &__gap-2-5 {
+    gap: 2.5rem;
+  }
+  &__gap-3 {
+    gap: 3rem;
+  }
 }
 
 .grid {
@@ -99,5 +110,23 @@
 
   &__center {
     place-items: center;
+  }
+}
+
+.bg-color {
+  &__primary {
+    background-color: $color-brand-primary;
+  }
+
+  &__primary-muted {
+    background-color: $color-brand-primary-muted;
+  }
+
+  &__primary-soft {
+    background-color: $color-brand-primary-soft;
+  }
+
+  &__subtle {
+    background-color: $color-bg-subtle;
   }
 }
