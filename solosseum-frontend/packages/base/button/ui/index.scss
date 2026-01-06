@@ -30,6 +30,17 @@
   border: none;
   cursor: pointer;
   border-radius: 6px;
+
+  &__primary {
+    @include btn-colors(
+      $color-brand-primary,
+      $color-brand-primary-muted,
+      $color-brand-primary-muted,
+      $color-text-inverse,
+      $color-text-inverse,
+      $color-text-inverse
+    );
+  }
 }
 
 .btn-transparent {

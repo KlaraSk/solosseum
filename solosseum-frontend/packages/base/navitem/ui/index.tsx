@@ -2,6 +2,7 @@ import "./index.scss";
 import { Button } from "@solosseum/button";
 
 import clsx from "clsx";
+import { scrollToSection } from "../../../../src/utils";
 
 type Props = {
   activeSection: string;
@@ -10,10 +11,6 @@ type Props = {
 };
 
 export const NavItem = ({ activeSection, link, open }: Props) => {
-  const scrollToSection = (id: string) => {
-    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
-  };
-
   const btnClasses = clsx("btn-transparent", {
     "btn-active": activeSection === link.id,
     "navigation__burger-btn": open === true,
