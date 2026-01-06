@@ -40,6 +40,13 @@
   line-height: 1.3;
 }
 
+.heading-4 {
+  font-size: $fs-h4;
+  text-transform: uppercase; /* All caps */
+  letter-spacing: 0.1em; /* Spaced out letters */
+  color: var(--portfolio-primary-medium); /* #3d6580 - Medium blue */
+}
+
 .text-color-primary {
   color: $color-brand-primary;
 }
@@ -129,4 +136,17 @@
   &__subtle {
     background-color: $color-bg-subtle;
   }
+  &__base {
+    background-color: $color-bg-base;
+  }
+}
+
+.sr-only:not(:focus):not(:active) {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
 }
