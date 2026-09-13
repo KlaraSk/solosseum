@@ -1,0 +1,68 @@
+// .form {
+//   &__label {
+//     background-color: pink;
+//   }
+
+//   &__input {
+//   }
+// }
+
+.form {
+  &__label {
+    // background-color: pink;
+  }
+
+  &__input,
+  &__message {
+    border: 1px solid var(--color-border, #ccc);
+    transition:
+      border-color 0.15s ease,
+      box-shadow 0.15s ease;
+
+    &:focus-visible {
+      outline: none;
+      border-color: var(--color-focus, #4a90d9);
+      box-shadow: 0 0 0 2px rgba(74, 144, 217, 0.25);
+    }
+
+    &--error {
+      border-color: var(--color-error, #d33);
+
+      &:focus-visible {
+        border-color: var(--color-error, #d33);
+        box-shadow: 0 0 0 2px rgba(221, 51, 51, 0.2);
+      }
+    }
+  }
+
+  &__error {
+    display: block;
+    min-height: 1.2em; // undviker layout-skutt när felet visas/döljs
+    color: var(--color-error, #d33);
+    font-size: 0.85rem;
+    animation: form-error-fade-in 0.15s ease;
+  }
+
+  &__honeypot {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap; // förhindrar att fältet påverkar layout om det bryts
+    border: 0;
+    padding: 0;
+    margin: -1px; // klassisk "visually hidden"-teknik
+  }
+}
+
+@keyframes form-error-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(-2px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

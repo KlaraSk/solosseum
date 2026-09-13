@@ -1,11 +1,7 @@
 import { ScrollSection } from "@solosseum/scrollsection";
 import "./index.scss";
 import { RoundedBox } from "@solosseum/roundedbox";
-import { useForm } from "react-hook-form";
-import emailjs from "@emailjs/browser";
-import clsx from "clsx";
-import { useRef, useState } from "react";
-import { Button } from "@solosseum/button";
+import { useState } from "react";
 import { Form } from "@solosseum/form";
 
 type Props = {};
