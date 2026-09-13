@@ -1,16 +1,14 @@
 import "./index.scss";
-import { RoundedBox } from "@solosseum/roundedbox";
 import { useForm } from "react-hook-form";
 import emailjs from "@emailjs/browser";
 import clsx from "clsx";
-import { useRef, useState, type Dispatch, type SetStateAction } from "react";
+import { useRef, type Dispatch, type SetStateAction } from "react";
 import { Button } from "@solosseum/button";
 
 type Props = { isSent: boolean; setIsSent: Dispatch<SetStateAction<boolean>> };
 
 export const Form = ({ isSent, setIsSent }: Props) => {
   const form = useRef<HTMLFormElement>(null);
-  // const [error, setError] = useState({ isError: false, errorMsg: "" });
 
   // Regular expression from MDN for email validation as per HTML specification.
   const emailRegExp = /^[\w.!#$%&'*+/=?^`{|}~-]+@[a-z\d-]+(?:\.[a-z\d-]+)*$/i;
@@ -34,7 +32,7 @@ export const Form = ({ isSent, setIsSent }: Props) => {
   const sendEmail = () => {
     form.current &&
       emailjs
-        .sendForm("service_netmm49", "contact_form", form.current, {
+        .sendForm("service_cxuz6ie", "contact_form", form.current, {
           publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
         })
         .then(
@@ -44,7 +42,7 @@ export const Form = ({ isSent, setIsSent }: Props) => {
           },
           (error) => {
             console.log("FAILED...", error.text);
-          }
+          },
         );
   };
 
