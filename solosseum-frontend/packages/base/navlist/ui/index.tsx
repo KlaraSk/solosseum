@@ -1,6 +1,6 @@
 import "./index.scss";
 import { links } from "../../../../src/data/links";
-import { useState, useEffect, useRef, type RefObject, type Dispatch, type SetStateAction } from "react";
+import { useRef, type RefObject, type Dispatch, type SetStateAction } from "react";
 import { useOnClickOutside } from "usehooks-ts";
 import { NavItem } from "@solosseum/navitem";
 
@@ -8,11 +8,11 @@ type Props = {
   open?: boolean;
   setOn?: Dispatch<SetStateAction<boolean>>;
   buttonRef?: RefObject<HTMLButtonElement | null>;
+  activeSection: string;
+  onNavigate: (id: string) => void;
 };
 
-export const NavList = ({ open, setOn, buttonRef }: Props) => {
-  const [activeSection, setActiveSection] = useState("start-section");
-
+export const NavList = ({ open, setOn, buttonRef, activeSection, onNavigate }: Props) => {
   const listRef = useRef<HTMLUListElement>(null);
 
   const handleClickOutside = (event: Event) => {
@@ -23,31 +23,14 @@ export const NavList = ({ open, setOn, buttonRef }: Props) => {
 
   useOnClickOutside(listRef as RefObject<HTMLElement>, handleClickOutside);
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setActiveSection(entry.target.id);
-          }
-        });
-      },
-      { threshold: 0.5 }
-    );
-    const sections = document.querySelectorAll(".scroll-section");
-    sections.forEach((section) => observer.observe(section));
-
-    return () => observer.disconnect();
-  }, []);
-
   return (
     <ul
       ref={listRef}
-      className={`flex flex__align-center flex__gap-1  ${open === true && "flex__column flex__align-start navigation__list"}`}
+      className={`flex flex__align-center flex__gap-1 ${open === true ? "flex__column flex__align-start navigation__list" : ""}`}
     >
-      {links.map((link) => {
-        return <NavItem link={link} open={open} activeSection={activeSection} />;
-      })}
+      {links.map((link) => (
+        <NavItem key={link.id} link={link} open={open} activeSection={activeSection} onNavigate={onNavigate} />
+      ))}
     </ul>
   );
 };

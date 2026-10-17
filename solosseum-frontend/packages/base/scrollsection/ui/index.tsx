@@ -9,7 +9,7 @@ type Props = {
 
 export const ScrollSection = ({ children, extraClasses, id }: Props) => {
   return (
-    <section id={id} className={`scroll-section ${extraClasses}`}>
+    <section id={id} className={`scroll-section ${extraClasses ?? ""}`.trim()}>
       {children}
     </section>
   );

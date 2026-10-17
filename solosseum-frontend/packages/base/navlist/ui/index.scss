@@ -1,6 +1,6 @@
 .navigation__list {
   position: absolute;
-  top: 110px;
+  top: calc(#{$header-height} + 10px);
   height: fit-content;
   border-radius: 4%;
 

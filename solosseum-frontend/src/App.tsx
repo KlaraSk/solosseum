@@ -8,14 +8,16 @@ import { Header } from "@solosseum/header";
 
 function App() {
   return (
-    <div className="app">
+    <div className="app-shell">
       <Header />
-      <StartSection />
-      <ServicesSection />
-      <ContactSection />
-      <CustomersSection />
-      <SocialSection />
-      <PartnersSection />
+      <main className="app">
+        <StartSection />
+        <ServicesSection />
+        <ContactSection />
+        <CustomersSection />
+        <SocialSection />
+        <PartnersSection />
+      </main>
     </div>
   );
 }

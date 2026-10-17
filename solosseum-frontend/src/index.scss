@@ -62,14 +62,19 @@
   color: $color-text-inverse;
 }
 
-// scroll snap inspo: https://youtu.be/AKfkfoY6r24?si=lI5crTvCBCNTWRpP
-.app {
-  height: 100vh;
+.app-shell {
   height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  overflow: clip; // inte hidden
+}
+
+.app {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  scroll-snap-type: y proximity;
   background-color: $color-bg-base;
-  overflow-y: scroll;
-  scroll-snap-type: y mandatory;
-  scroll-padding-top: 10rem;
 }
 
 /* ===== Flex & grid ===== */

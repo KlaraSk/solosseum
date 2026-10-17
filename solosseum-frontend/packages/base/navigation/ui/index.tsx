@@ -5,6 +5,7 @@ import { NavList } from "@solosseum/navlist";
 import { RxHamburgerMenu } from "react-icons/rx";
 import useToggle from "../../../../src/hooks/useToggle";
 import { useRef } from "react";
+import { useActiveSection } from "../../../../src/hooks/useActiveSection";
 
 export const Navigation = () => {
   const { vw } = useViewport();
@@ -12,12 +13,18 @@ export const Navigation = () => {
     initialValue: false,
     onToggle() {},
   });
+  const [activeSection, setActiveSection] = useActiveSection();
   const buttonRef = useRef<HTMLButtonElement>(null);
+
+  const handleNavigate = (id: string) => {
+    setActiveSection(id);
+    setOn(false);
+  };
 
   return (
     <nav className="flex navigation">
       {vw >= 992 ? (
-        <NavList />
+        <NavList activeSection={activeSection} onNavigate={handleNavigate} />
       ) : (
         <>
           <Button
@@ -29,7 +36,7 @@ export const Navigation = () => {
             <RxHamburgerMenu />
             <span>Meny</span>
           </Button>
-          {open && <NavList open={open} setOn={setOn} buttonRef={buttonRef} />}
+          {open && <NavList open={open} setOn={setOn} buttonRef={buttonRef} activeSection={activeSection} onNavigate={handleNavigate} />}
         </>
       )}
     </nav>
