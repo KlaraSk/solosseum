@@ -24,7 +24,7 @@ export const StartSection = ({}: Props) => {
             Jag hjälper organisationer att genomföra framgångsrika projekt inom ERP-implementering, affärsutveckling och digital
             transformation.
           </p>
-          <Button style="primary" extraClasses="start-section__btn" onClick={handleClick} aria="Till kontaktformuläret">
+          <Button variant="primary" extraClasses="start-section__btn" onClick={handleClick} aria="Till kontaktformuläret">
             Kontakt
           </Button>
         </div>

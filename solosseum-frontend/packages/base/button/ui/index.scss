@@ -30,6 +30,26 @@
   border: none;
   cursor: pointer;
   border-radius: 6px;
+  font-family: $font-base;
+  font-weight: 600;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.1s ease;
+
+  &:active:not(:disabled) {
+    transform: translateY(1px);
+  }
+
+  &:focus-visible {
+    outline: 3px solid $color-brand-primary-soft;
+    outline-offset: 2px;
+  }
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
 
   &__primary {
     @include btn-colors(
