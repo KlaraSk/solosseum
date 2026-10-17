@@ -22,6 +22,7 @@ export const NavItem = ({ activeSection, link, open, onNavigate }: Props) => {
 
     e.preventDefault();
     scrollToSection(link.id);
+    document.getElementById(link.id)?.focus({ preventScroll: true });
     onNavigate(link.id);
   };
 

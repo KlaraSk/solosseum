@@ -19,7 +19,11 @@ export const ServicesSection = ({}: Props) => {
   };
 
   return (
-    <ScrollSection id="services-section" extraClasses="flex flex__column flex__gap-3 flex__align-center  text-color-primary services">
+    <ScrollSection
+      id="tjanster"
+      extraClasses="flex flex__column flex__gap-3 flex__align-center  text-color-primary services"
+      label="tjanster"
+    >
       <h2 className="heading-2">Tjänster</h2>
       <div className="flex flex__gap-2 flex__justify-center  services__div">{generateBoxes()}</div>
     </ScrollSection>

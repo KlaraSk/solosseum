@@ -8,7 +8,7 @@ export const ContactSection = () => {
   const [isSent, setIsSent] = useState(false);
 
   return (
-    <ScrollSection id="contact-section" extraClasses="bg-color__primary-muted">
+    <ScrollSection id="kontakt" extraClasses="bg-color__primary-muted" label="Kontakt">
       <div className="contact__top-div">
         <h2 className="heading-2 text-color-inverse">Kontakta mig</h2>
         <p className="text-body text-color-inverse">
