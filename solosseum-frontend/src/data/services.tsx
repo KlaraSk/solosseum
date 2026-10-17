@@ -1,6 +1,6 @@
 import { PiChartPieSlice } from "react-icons/pi";
 import { PiClock } from "react-icons/pi";
-import { PiSquaresFour } from "react-icons/pi";
+import { PiSquaresFour, PiSparkle, PiGavel } from "react-icons/pi";
 
 export const services = [
   {
@@ -20,5 +20,18 @@ export const services = [
     text: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores est aliquid dicta exercitationem, quidem neque.",
     icon: <PiClock />,
     iconBg: "primary-soft",
+  },
+  {
+    title: "AI för ledning/ägare",
+    text: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores est aliquid dicta exercitationem, quidem neque.",
+    icon: <PiSparkle />,
+    iconBg: "primary",
+  },
+
+  {
+    title: "Styrelseuppdrag",
+    text: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores est aliquid dicta exercitationem, quidem neque.",
+    icon: <PiGavel />,
+    iconBg: "primary-muted",
   },
 ];

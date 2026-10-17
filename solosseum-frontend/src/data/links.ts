@@ -1,26 +1,26 @@
 export const links = [
   {
-    id: "start-section",
+    id: "start",
     text: "Start",
   },
   {
-    id: "services-section",
+    id: "tjanster",
     text: "Tjänster",
   },
   {
-    id: "contact-section",
+    id: "kontakt",
     text: "Kontakt",
   },
   {
-    id: "customers-section",
+    id: "kunder",
     text: "Kunder",
   },
   {
-    id: "social-section",
+    id: "sociala-medier",
     text: "Sociala medier",
   },
   {
-    id: "partners-section",
+    id: "samarbeten",
     text: "Samarbeten",
   },
 ];

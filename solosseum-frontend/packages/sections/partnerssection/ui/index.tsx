@@ -6,7 +6,7 @@ type Props = {};
 export const PartnersSection = ({}: Props) => {
   return (
     <>
-      <ScrollSection id="partners-section" extraClasses="grid grid__center">
+      <ScrollSection id="samarbeten" extraClasses="grid grid__center" label="samarbeten">
         <div className="partners grid">
           <h2 className="heading-2 text-color-primary partners__heading">Samarbeten</h2>
           <img className="partners__logo partners__logo--solosseum" src="./public/solosseum-logo.svg" alt="Solosseum AB" />

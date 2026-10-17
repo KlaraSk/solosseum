@@ -6,6 +6,9 @@ $color-brand-primary: #1a3a4a;
 $color-brand-primary-muted: #3d6580;
 $color-brand-primary-soft: #5a96b3;
 
+/* Layout */
+$header-height: 100px;
+
 // Backgrounds
 $color-bg-base: #f4f8f7;
 $color-bg-subtle: #d8e3e0;
@@ -39,4 +42,4 @@ $fs-small: clamp(0.875rem, 0.85rem + 0.2vw, 1rem);
 $fs-h1: clamp(2.25rem, 1.8rem + 1.5vw, 3rem);
 $fs-h2: clamp(1.875rem, 1.5rem + 1.2vw, 2.5rem);
 $fs-h3: clamp(1.5rem, 1.25rem + 0.8vw, 2rem);
-$fs-h4: clamp(0.25rem, 0.5rem + 0.6vw, 1.5rem);
+$fs-h4: clamp(1.25rem, 0.5rem + 0.6vw, 1.5rem);

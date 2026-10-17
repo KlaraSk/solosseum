@@ -2,9 +2,6 @@
   &__top-div {
     flex: 1;
   }
-  &__btn {
-    width: 35%;
-  }
 
   &__bottom-div {
     flex: 1;
@@ -13,6 +10,14 @@
   &__img {
     border-radius: 30px;
     border: 1.75px solid $color-brand-primary;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .start-section {
+    &__btn {
+      width: 35%;
+    }
   }
 }
 
@@ -27,6 +32,7 @@
     }
   }
 }
+
 @media screen and (max-width: 668px) {
   .start-section {
     &__img {

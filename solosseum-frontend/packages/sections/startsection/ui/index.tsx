@@ -13,8 +13,9 @@ export const StartSection = ({}: Props) => {
   return (
     <>
       <ScrollSection
-        id="start-section"
+        id="start"
         extraClasses="flex  flex__align-center flex__justify-center flex__gap-3 start-section bg-color__subtle wrapper"
+        label="start"
       >
         <h1 className="sr-only">Solosseum AB Magnus Henrichson</h1>
         <div className="flex flex__column  flex__justify-center flex__gap-1-5 start-section__top-div">
