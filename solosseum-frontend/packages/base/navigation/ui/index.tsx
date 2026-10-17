@@ -13,12 +13,12 @@ export const Navigation = () => {
     initialValue: false,
     onToggle() {},
   });
-  const [activeSection, setActiveSection] = useActiveSection();
+  const [activeSection, navigateTo] = useActiveSection();
   const buttonRef = useRef<HTMLButtonElement>(null);
 
   const handleNavigate = (id: string) => {
-    setActiveSection(id);
-    setOn(false);
+    navigateTo(id);
+    setOn(false); // Close menu
   };
 
   return (
