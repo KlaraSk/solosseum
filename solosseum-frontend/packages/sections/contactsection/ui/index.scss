@@ -1,0 +1,20 @@
+.contact {
+  &__top-div {
+    max-width: 40rem;
+    padding-top: 3rem;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  &__success {
+    max-width: 32rem;
+    margin-inline: auto;
+    padding-block: 2.5rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+}

@@ -1,33 +1,34 @@
 import "./index.scss";
 import { forwardRef, type ReactNode } from "react";
+import clsx from "clsx";
 
 type Props = {
   text?: string;
   children?: ReactNode;
   extraClasses?: string;
-  onClick: () => void;
-  aria: string;
-  type?: "submit" | "reset";
+  onClick?: () => void;
+  aria?: string;
+  type?: "submit" | "reset" | "button";
   isDisabled?: boolean;
-  style?: string;
+  variant?: "primary";
 };
 
 export const Button = forwardRef<HTMLButtonElement, Props>(
-  ({ text, children, extraClasses, onClick, aria, type, isDisabled, style }, ref) => {
+  ({ text, children, extraClasses, onClick, aria, type = "button", isDisabled, variant }, ref) => {
     return (
       <button
         ref={ref}
         aria-label={aria}
-        type={type ? type : "button"}
+        type={type}
         disabled={isDisabled}
         onClick={onClick}
-        className={`btn text-body ${extraClasses} ${style && `btn__${style}`}`}
+        className={clsx("btn", "text-body", variant && `btn__${variant}`, extraClasses)}
       >
         {text}
         {children}
       </button>
     );
-  }
+  },
 );
 
 Button.displayName = "Button";
