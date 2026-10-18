@@ -9,14 +9,14 @@ export const PartnersSection = ({}: Props) => {
       <ScrollSection id="samarbeten" extraClasses="grid grid__center" label="samarbeten">
         <div className="partners grid">
           <h2 className="heading-2 text-color-primary partners__heading">Samarbeten</h2>
-          <img className="partners__logo partners__logo--solosseum" src="./public/solosseum-logo.svg" alt="Solosseum AB" />
+          <img className="partners__logo partners__logo--solosseum" src="/solosseum-logo.svg" alt="Solosseum AB" />
           <div className="grid grid__center">
-            <img className="partners__logo" src="./public/hk_logo_webb.svg" alt="Handelskammaren Värmland" />
+            <img className="partners__logo" src="/hk_logo_webb.svg" alt="Handelskammaren Värmland" />
           </div>
           <div className="grid grid__center">
             <img
               className="partners__logo"
-              src="./public/UF-Logo-utsnitt-brun.-OBS!-Får-endast-användas-ihop-med-bruna-loggan.png"
+              src="/UF-Logo-utsnitt-brun.-OBS!-Får-endast-användas-ihop-med-bruna-loggan.png"
               alt="Ung företagsamhet"
             />
           </div>

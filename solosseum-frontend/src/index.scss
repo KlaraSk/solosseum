@@ -18,6 +18,11 @@
 .text-small {
   font-size: $fs-small;
 }
+
+.text-large {
+  font-size: $fs-large;
+}
+
 .text-center {
   text-align: center;
 }
@@ -99,6 +104,9 @@
   }
   &__gap-0-5 {
     gap: 0.5rem;
+  }
+  &__gap-0-75 {
+    gap: 0.75rem;
   }
   &__gap-1 {
     gap: 1rem;

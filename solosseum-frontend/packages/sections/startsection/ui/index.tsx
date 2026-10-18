@@ -31,7 +31,7 @@ export const StartSection = ({}: Props) => {
         </div>
 
         <div className="grid grid__center start-section__bottom-div">
-          <img src="./public/magnus-henrichson.jpeg" alt="Magnus Henrichson Solosseum AB" className="start-section__img" />
+          <img src="/magnus-henrichson.jpeg" alt="Magnus Henrichson Solosseum AB" className="start-section__img" />
         </div>
       </ScrollSection>
     </>
