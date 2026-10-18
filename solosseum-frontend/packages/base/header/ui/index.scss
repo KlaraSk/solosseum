@@ -1,0 +1,9 @@
+.header {
+  position: relative;
+  z-index: 10;
+  flex: none;
+  padding: 0rem 1rem;
+  height: $header-height;
+  background-color: $color-surface-cream;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+}

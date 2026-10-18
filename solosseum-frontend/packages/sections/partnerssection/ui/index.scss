@@ -1,0 +1,36 @@
+.partners {
+  gap: 1rem;
+
+  &__logo-div {
+  }
+
+  &__logo {
+    max-height: 4rem;
+    grid-row: 3;
+
+    &--solosseum {
+      min-height: 4.5rem;
+      grid-row: 2;
+      grid-column: 1 / span 2;
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__heading {
+    grid-column: 1 / span 2;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+}
+
+@media screen and (min-width: 668px) {
+  .partners {
+    &__logo {
+      max-height: 5rem;
+
+      &--solosseum {
+        min-height: 6rem;
+      }
+    }
+  }
+}

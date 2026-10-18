@@ -1,0 +1,17 @@
+.some {
+  &__heading {
+    justify-self: center;
+  }
+}
+
+.linkedin-iframe {
+  width: 100%;
+  border: none;
+  height: 1000px;
+}
+
+@media (max-width: 992px) {
+  .linkedin-iframe {
+    height: 1100px;
+  }
+}

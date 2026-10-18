@@ -1,0 +1,8 @@
+.navigation__list {
+  position: absolute;
+  top: calc(#{$header-height} + 10px);
+  height: fit-content;
+  border-radius: 4%;
+
+  background-color: $color-surface-cream;
+}

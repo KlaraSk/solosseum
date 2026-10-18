@@ -1,0 +1,169 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  font-family: $font-primary;
+  // outline: 1px solid salmon;
+}
+
+/* 5. Typografi-klasser */
+.text-body {
+  font-size: $fs-body;
+  line-height: 1.5rem;
+}
+
+.text-small {
+  font-size: $fs-small;
+}
+
+.text-large {
+  font-size: $fs-large;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.heading-1 {
+  font-size: $fs-h1;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.heading-2 {
+  font-size: $fs-h2;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.heading-3 {
+  font-size: $fs-h3;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.heading-4 {
+  font-size: $fs-h4;
+  text-transform: uppercase; /* All caps */
+  letter-spacing: 0.1em; /* Spaced out letters */
+  color: var(--portfolio-primary-medium); /* #3d6580 - Medium blue */
+}
+
+.text-color-primary {
+  color: $color-brand-primary;
+}
+
+.text-color-dark {
+  color: $color-text-primary;
+}
+
+.text-color-muted {
+  color: $color-text-muted;
+}
+.text-color-inverse {
+  color: $color-text-inverse;
+}
+
+.app-shell {
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  overflow: clip; // inte hidden
+}
+
+.app {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  scroll-snap-type: y proximity;
+  background-color: $color-bg-base;
+}
+
+/* ===== Flex & grid ===== */
+
+.flex {
+  display: flex;
+
+  &__column {
+    flex-direction: column;
+  }
+  &__align-center {
+    align-items: center;
+  }
+  &__align-start {
+    align-items: start;
+  }
+  &__justify-center {
+    justify-content: center;
+  }
+  &__gap-0-25 {
+    gap: 0.25rem;
+  }
+  &__gap-0-5 {
+    gap: 0.5rem;
+  }
+  &__gap-0-75 {
+    gap: 0.75rem;
+  }
+  &__gap-1 {
+    gap: 1rem;
+  }
+  &__gap-1-5 {
+    gap: 1.5rem;
+  }
+  &__gap-2 {
+    gap: 2rem;
+  }
+  &__gap-2-5 {
+    gap: 2.5rem;
+  }
+  &__gap-3 {
+    gap: 3rem;
+  }
+}
+
+.grid {
+  display: grid;
+
+  &__center {
+    place-items: center;
+  }
+}
+
+.bg-color {
+  &__primary {
+    background-color: $color-brand-primary;
+  }
+
+  &__primary-muted {
+    background-color: $color-brand-primary-muted;
+  }
+
+  &__primary-soft {
+    background-color: $color-brand-primary-soft;
+  }
+
+  &__subtle {
+    background-color: $color-bg-subtle;
+  }
+  &__base {
+    background-color: $color-bg-base;
+  }
+}
+
+.sr-only:not(:focus):not(:active) {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.d-none {
+  display: none;
+}
