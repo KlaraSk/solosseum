@@ -16,8 +16,8 @@ export const links = [
     text: "Kunder",
   },
   {
-    id: "sociala-medier",
-    text: "Sociala medier",
+    id: "solosseum-pa-linkedin",
+    text: "Solosseum på LinkedIn",
   },
   {
     id: "samarbeten",

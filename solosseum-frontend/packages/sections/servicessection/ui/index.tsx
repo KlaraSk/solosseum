@@ -9,7 +9,7 @@ export const ServicesSection = ({}: Props) => {
   const generateBoxes = () => {
     return services.map((service) => {
       return (
-        <RoundedBox extraClasses="bg-color__subtle flex__gap-0-5 service">
+        <RoundedBox extraClasses="bg-color__subtle flex__gap-0-5 service" key={service.title}>
           <div className={`grid grid__center service__img-div bg-color__${service.iconBg} text-color-inverse`}>{service.icon} </div>
           <h3 className="heading-3 service__title">{service.title}</h3>
           <p className="text-body text-center">{service.text}</p>
