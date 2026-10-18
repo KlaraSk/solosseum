@@ -7,7 +7,7 @@ type Props = {};
 
 export const StartSection = ({}: Props) => {
   const handleClick = () => {
-    scrollToSection("contact-section");
+    scrollToSection("kontakt");
   };
 
   return (
