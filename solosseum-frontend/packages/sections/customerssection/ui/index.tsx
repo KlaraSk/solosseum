@@ -1,7 +1,7 @@
 import { ScrollSection } from "@solosseum/scrollsection";
 import "./index.scss";
-import { customers } from "../../../../src/data/customers";
-import { Quote } from "../../../base/quote";
+// import { customers } from "../../../../src/data/customers";
+// import { Quote } from "../../../base/quote";
 
 type Props = {};
 

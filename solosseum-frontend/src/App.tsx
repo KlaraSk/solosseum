@@ -7,7 +7,6 @@ import { PartnersSection } from "@solosseum/partnerssection";
 import { Header } from "@solosseum/header";
 import { useEffect } from "react";
 import { scrollToSection } from "./utils";
-import { ScrollSection } from "@solosseum/scrollsection";
 
 function App() {
   useEffect(() => {
