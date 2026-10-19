@@ -11,8 +11,10 @@ export const ServicesSection = ({}: Props) => {
       return (
         <RoundedBox extraClasses="bg-color__subtle flex__gap-0-5 service" key={service.title}>
           <div className={`grid grid__center service__img-div bg-color__${service.iconBg} text-color-inverse`}>{service.icon} </div>
-          <h3 className="heading-3 service__title">{service.title}</h3>
-          <p className="text-body text-center">{service.text}</p>
+          <h3 className="heading-3 service__title text-center">{service.title}</h3>
+          <p style={{ whiteSpace: "pre-line" }} className="text-body text-center">
+            {service.text}
+          </p>
         </RoundedBox>
       );
     });
