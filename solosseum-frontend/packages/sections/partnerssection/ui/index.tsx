@@ -35,7 +35,9 @@ export const PartnersSection = ({}: Props) => {
             </p>
           </RoundedBox>
         </div>
-        {/* <img className="partners__logo-solosseum" src="/solosseum-logo-subtle-white.png" alt="Solosseum AB" /> */}
+        <footer className="grid grid__center">
+          <img className="partners__logo-solosseum" src="/solosseum-logo-subtle-white.png" alt="Solosseum AB" />
+        </footer>
       </ScrollSection>
     </>
   );
