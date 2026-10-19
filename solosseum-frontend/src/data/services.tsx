@@ -23,7 +23,7 @@ export const services = [
   },
   {
     title: "IT-stöd",
-    text: "Löpande stöd/hjälp till dig som har IT-chefs-ansvaret som en del i din roll, till exempel CFO för att kunna göra leverantörsuppföljning, löpande stöd/IT-board eller specifik hjälp i vissa situationer.",
+    text: "Löpande stöd/hjälp till dig som har IT-chefs-ansvaret som en del i ditt jobb, till exempel som CFO. Genom IT-stöd kan du få ett bollplank,  löpande stöd/IT-board eller specifik hjälp i vissa situationer för upphandling, leverantörsuppföljning eller införandeprojekt",
     icon: <PiSquaresFour />,
     iconBg: "primary-muted",
   },
