@@ -1,8 +1,11 @@
 .customers {
-  grid-template-rows: auto;
-  column-gap: 1rem;
+  // grid-template-rows: auto;
+  // grid-template-columns: 1fr 1fr;
+  // column-gap: 1rem;
   &__text-div {
-    grid-column: 2;
+    // grid-column: 2;
+    flex: 1;
+    max-width: 70ch;
   }
   &__img-div {
     grid-column: 1;
@@ -10,12 +13,27 @@
   &__img {
     width: 100%;
   }
+
+  &__logos {
+    // grid-column: 1;
+    // display: flex;
+    flex: 1;
+    // gap: 0.75rem;
+
+    img {
+      max-width: 200px;
+      object-fit: contain;
+    }
+  }
 }
 
-@media screen and (max-width: 998px) {
+//TODO här slutade jag. fixa till loggorna i mobilläge.
+@media screen and (max-width: 1224px) {
+  // @media screen and (max-width: 998px) {
   .customers {
-    grid-template-rows: 1fr 2fr;
-    place-items: start;
+    // grid-template-rows: 1fr 2fr;
+    // place-items: start;
+    flex-direction: column;
     &__text-div {
       grid-column: 1;
       grid-row: 1;
