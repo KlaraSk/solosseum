@@ -7,6 +7,6 @@ type Props = {
   alignLeft?: boolean;
 };
 
-export const RoundedBox = ({ children, extraClasses, alignLeft }: Props) => {
+export const RoundedBox = ({ children, extraClasses = "", alignLeft }: Props) => {
   return <div className={`flex flex__column ${alignLeft ? "" : "flex__align-center"} box ${extraClasses}`}>{children}</div>;
 };

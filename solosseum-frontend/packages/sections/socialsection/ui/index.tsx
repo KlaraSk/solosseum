@@ -30,7 +30,7 @@ export const SocialSection = ({}: Props) => {
   return (
     <>
       <ScrollSection id="solosseum-pa-linkedin" label="Solosseum på LinkedIn" extraClasses="flex flex__column flex__gap-3">
-        <h2 className="heading-2 some__heading">Solosseum på LinkedIn</h2>
+        <h2 className="heading-2 some__heading text-center">Solosseum på LinkedIn</h2>
 
         <iframe
           key={bp}

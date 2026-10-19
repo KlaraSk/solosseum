@@ -1,36 +1,74 @@
 .partners {
-  gap: 1rem;
+  gap: 2rem;
 
-  &__logo-div {
+  &__link::before {
+    content: "↗";
+    position: absolute;
+    top: 0.75rem;
+    right: 1rem;
+    opacity: 0;
+    transition: opacity 0.2s ease;
   }
 
-  &__logo {
-    max-height: 4rem;
-    grid-row: 3;
+  &__card:hover &__link::before,
+  &__card:has(.partners__link:focus-visible) &__link::before {
+    opacity: 1;
+  }
 
-    &--solosseum {
-      min-height: 4.5rem;
-      grid-row: 2;
-      grid-column: 1 / span 2;
-      margin-bottom: 1rem;
+  &__card {
+    position: relative;
+    transition:
+      transform 0.2s ease,
+      box-shadow 0.2s ease;
+
+    @media (hover: hover) {
+      &:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 24px rgb(0 0 0 / 0.12);
+      }
+    }
+
+    &:has(.partners__link:focus-visible) {
+      outline: 2px solid currentColor;
+      outline-offset: 3px;
     }
   }
 
-  &__heading {
-    grid-column: 1 / span 2;
-    text-align: center;
-    margin-bottom: 1rem;
+  &__link {
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+    }
+
+    &:focus-visible {
+      outline: none;
+    }
+  }
+
+  &__logo {
+    max-height: 5rem;
+  }
+
+  &__logo-solosseum {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
   }
 }
 
-@media screen and (min-width: 668px) {
+footer {
+  margin-top: auto;
+}
+@media screen and (max-width: 998px) {
+  .partners {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 475px) {
   .partners {
     &__logo {
-      max-height: 5rem;
-
-      &--solosseum {
-        min-height: 6rem;
-      }
+      max-width: 8rem;
     }
   }
 }

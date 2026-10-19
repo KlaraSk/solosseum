@@ -2,7 +2,8 @@
   position: absolute;
   top: calc(#{$header-height} + 10px);
   height: fit-content;
-  border-radius: 4%;
+  border-radius: 8px;
+  padding: 2rem 0rem;
 
   background-color: $color-surface-cream;
 }
