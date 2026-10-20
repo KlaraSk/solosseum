@@ -9,6 +9,14 @@
   // outline: 1px solid salmon;
 }
 
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+  overscroll-behavior: none;
+  background-color: $color-bg-base;
+}
+
 /* 5. Typografi-klasser */
 .text-body {
   font-size: $fs-body;
@@ -68,16 +76,19 @@
 }
 
 .app-shell {
-  height: 100dvh;
+  position: fixed;
+  inset: 0;
   display: flex;
   flex-direction: column;
-  overflow: clip; // inte hidden
+  overflow: clip;
 }
 
 .app {
+  position: relative;
   flex: 1;
   min-height: 0;
   overflow-y: auto;
+  overscroll-behavior-y: contain;
   scroll-snap-type: y proximity;
   background-color: $color-bg-base;
 }
