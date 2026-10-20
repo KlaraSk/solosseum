@@ -8,10 +8,11 @@ type Props = {};
 export const CustomersSection = ({}: Props) => {
   return (
     <>
-      <ScrollSection id="kunder" label="kunder" extraClasses=" grid grid__center customers bg-color__subtle">
-        <div className="customers__img-div">
+      <ScrollSection id="kunder" label="kunder" extraClasses=" flex flex__gap-3 flex__align-center customers bg-color__subtle">
+        {/* <ScrollSection id="kunder" label="kunder" extraClasses=" grid grid__center customers bg-color__subtle"> */}
+        {/* <div className="customers__img-div">
           <img className="customers__img" src="/solosseum-customers.png" alt="" />
-        </div>
+        </div> */}{" "}
         <div className="customers__text-div flex flex__column flex__gap-0-75">
           <h2 className="heading-2">Kunder</h2>
           <p className="text-body">
@@ -19,6 +20,11 @@ export const CustomersSection = ({}: Props) => {
             Vi har arbetat med många av de klassiska värmländska familjeägda bolagen, men har även erfarenhet från uppdrag med större
             börsnoterade aktörer. Oftast inom tillverkande industri samt tjänstesektorn.
           </p>
+        </div>
+        <div className="flex flex__gap-1 customers__logos">
+          <img src="/somas-logo.png" alt="Somas AB" />
+          <img src="/lofbergs_original_3-lines_small.jpeg" alt="Löfbergs Lila" />
+          <img src="/smamineral_press_cmyk.png" alt="SMA Mineral" />
         </div>
         {/* <div className="flex flex__column flex__gap-2-5">
           {customers.map((customer) => {
