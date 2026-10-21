@@ -34,7 +34,7 @@ export const SocialSection = ({}: Props) => {
 
         <iframe
           key={bp}
-          src="https://widgets.sociablekit.com/linkedin-profile-posts/iframe/25722948"
+          src="https://widgets.sociablekit.com/linkedin-profile-posts/iframe/25723541"
           title="LinkedIn-profil"
           loading="lazy"
           className="linkedin-iframe"
