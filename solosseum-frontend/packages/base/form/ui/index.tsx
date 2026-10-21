@@ -23,7 +23,7 @@ export const Form = ({ isSent, setIsSent }: Props) => {
     formState: { errors },
   } = useForm({
     mode: "onTouched",
-    defaultValues: { user_name: "", user_email: "", message: "", name2: "", email2: "" },
+    defaultValues: { name: "", email: "", message: "", name2: "", email2: "" },
   });
 
   const formClassNames = clsx("flex", "flex__column", "flex__gap-2", "heading-4", "font-color-black", "form", {
@@ -33,7 +33,7 @@ export const Form = ({ isSent, setIsSent }: Props) => {
   const sendEmail = () => {
     form.current &&
       emailjs
-        .sendForm("service_cxuz6ie", "contact_form", form.current, {
+        .sendForm("service_mqqd8yu", "contact_form", form.current, {
           publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
         })
         .then(
@@ -65,16 +65,16 @@ export const Form = ({ isSent, setIsSent }: Props) => {
     >
       <label className="flex flex__column form__label">
         Namn (obligatoriskt){" "}
-        <span id="user_name-error" className="form__error" aria-live="polite">
-          {errors.user_name?.message}
+        <span id="name-error" className="form__error" aria-live="polite">
+          {errors.name?.message}
         </span>
         <input
           type="text"
           required
-          aria-invalid={!!errors.user_name}
-          aria-describedby={errors.user_name ? "user_name-error" : undefined}
-          className={clsx("flex", "form__input", { "form__input--error": errors.user_name })}
-          {...register("user_name", {
+          aria-invalid={!!errors.name}
+          aria-describedby={errors.name ? "name-error" : undefined}
+          className={clsx("flex", "form__input", { "form__input--error": errors.name })}
+          {...register("name", {
             required: "Fyll i ett namn",
             minLength: { value: 3, message: "Namnet måste vara minst 3 tecken" },
             pattern: { value: nameRegExp, message: "Namnet får endast innehålla bokstäver." },
@@ -84,16 +84,16 @@ export const Form = ({ isSent, setIsSent }: Props) => {
 
       <label className="flex flex__column form__label">
         Mejladress (obligatoriskt){" "}
-        <span id="user_email-error" className="form__error" aria-live="polite">
-          {errors.user_email?.message}
+        <span id="email-error" className="form__error" aria-live="polite">
+          {errors.email?.message}
         </span>
         <input
           type="email"
           required
-          aria-invalid={!!errors.user_email}
-          aria-describedby={errors.user_email ? "user_email-error" : undefined}
-          className={clsx("flex", "form__input", { "form__input--error": errors.user_email })}
-          {...register("user_email", {
+          aria-invalid={!!errors.email}
+          aria-describedby={errors.email ? "email-error" : undefined}
+          className={clsx("flex", "form__input", { "form__input--error": errors.email })}
+          {...register("email", {
             required: "Fyll i en mailadress",
             pattern: { value: emailRegExp, message: "Fyll i en giltig mailadress" },
           })}
